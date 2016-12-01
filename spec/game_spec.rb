@@ -74,6 +74,14 @@ describe(Game) do
     end
   end
 
+  describe('#get_miss_count') do
+    it('returns the total number of miss guesses') do
+      new_game = Game.new()
+      new_game.set_word('cat')
+      new_game.match?('x')
+      expect(new_game.get_miss_count()).to(eq(1))
+    end
+  end
 
 
 end

@@ -30,7 +30,7 @@ class Game
       @spaces.slice!(index)
       @spaces.insert(index, guessed)
     end
-    
+
     current_matches
   end
 
@@ -61,6 +61,10 @@ class Game
       @spaces.push("_")
     end
     @spaces.join(" ")
+  end
+
+  define_method(:get_miss_count) do
+    @miss_counter
   end
 
 end
